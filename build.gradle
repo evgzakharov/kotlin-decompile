@@ -17,7 +17,13 @@ dependencies {
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
     kotlinOptions {
-        freeCompilerArgs = ["-XXLanguage:+InlineClasses"]
+//        "-XXLanguage:+InlineClasses"
+//        -Xjvm-default=compatibility
+//        -Xjvm-default=enable
+//        -Xno-param-assertions
+//        -Xno-call-assertions
+//        -Xprogressive
+        freeCompilerArgs = ["-XXLanguage:+InlineClasses", "-Xjvm-default=compatibility"]
     }
 }
 compileTestKotlin {
