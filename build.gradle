@@ -14,18 +14,20 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
 }
 
-compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-    kotlinOptions {
 //        "-XXLanguage:+InlineClasses"
 //        -Xjvm-default=compatibility
 //        -Xjvm-default=enable
 //        -Xno-param-assertions
 //        -Xno-call-assertions
 //        -Xprogressive
-        freeCompilerArgs = ["-XXLanguage:+InlineClasses", "-Xjvm-default=enable"]
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions {
+        freeCompilerArgs = ["-Xno-call-assertions", "-Xno-param-assertions"]
     }
 }
+
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
