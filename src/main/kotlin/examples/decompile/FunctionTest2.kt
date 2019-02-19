@@ -9,7 +9,7 @@ fun main() {
     }
 
     call {
-        mutIndex += 1
+        println(mutIndex)
     }
 }
 

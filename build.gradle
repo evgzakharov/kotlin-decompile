@@ -23,7 +23,7 @@ compileKotlin {
 //        -Xno-param-assertions
 //        -Xno-call-assertions
 //        -Xprogressive
-        freeCompilerArgs = ["-XXLanguage:+InlineClasses", "-Xjvm-default=compatibility"]
+        freeCompilerArgs = ["-XXLanguage:+InlineClasses", "-Xjvm-default=enable"]
     }
 }
 compileTestKotlin {
