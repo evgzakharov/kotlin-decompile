@@ -4,13 +4,12 @@ import java.io.File
 import java.lang.RuntimeException
 import java.nio.file.FileSystem
 
-inline fun <reified T> selfClass(): Class<T> = T::class.java
+inline fun <reified T> printClass(value: T) {
+    println(T::class.java.name)
+}
 
 fun main() {
-    println(selfClass<File>())
-    println(selfClass<String>())
-    println(selfClass<Thread>())
-
-    val fileSystemClass: Class<FileSystem> = selfClass()
-    println(fileSystemClass)
+    printClass(3)
+    printClass("string value")
+    printClass(File("/path"))
 }
